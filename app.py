@@ -30,4 +30,9 @@ def start(message, res = False):
 	calc_answer.clear_answers(message.from_user.id)
 	bot.send_message(message.chat.id, load_db.textOnStart, reply_markup=inline_buttons.gen_markup_start())
 
-bot.infinity_polling()
+while True:
+	try:
+		bot.infinity_polling(none_stop=True)
+	except Exception as e:
+		print(e)
+		time.sleep(15)
