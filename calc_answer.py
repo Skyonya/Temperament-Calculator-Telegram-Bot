@@ -19,9 +19,7 @@ def add_answer(userID, answerText):
 			userdict[userID].append(4)
 
 def calc_answer_inv(answer):
-	#answerInv = map(lambda x: 5 - answer[x], answer)
-	for x in range(get_max_len_answer()):
-	 	answerInv.append(5 - answer[x])
+	answerInv = list(map(lambda x: 5 - answer[x], answer))
 	return answerInv
 
 def get_len_answer(userID):
