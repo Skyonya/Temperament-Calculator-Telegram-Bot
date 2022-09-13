@@ -1,5 +1,4 @@
 import telebot
-import os
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 import config
